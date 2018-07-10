@@ -9,6 +9,16 @@ Written by Rob Maslen @rbmaslen
   <img src="https://github.com/nettitude/Invoke-PowerThIEf/blob/master/Images/creds-lastpass.gif?raw=true" width="800" title="LastPass Credentials in transit">
 </p>
 
+### Migrating a PoshC2 implant into IExplore.exe 
+<p align="center">
+  <img src="https://github.com/nettitude/Invoke-PowerThIEf/blob/master/Images/loading-dll.gif?raw=true" width="800" title="PoshC2 in IExplore">
+</p>
+
+### Extracting a "secret" from a page
+<p align="center">
+  <img src="https://github.com/nettitude/Invoke-PowerThIEf/blob/master/Images/dumphtml.gif?raw=true" width="800" title="PoshC2 in IExplore">
+</p>
+
 # Usage
 First import the module using . .\Invoke-PowerThIEf.ps1 then use any of the following commands.
 
