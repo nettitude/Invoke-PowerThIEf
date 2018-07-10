@@ -22,6 +22,7 @@ Written by Rob Maslen @rbmaslen
 # Usage
 First import the module using . .\Invoke-PowerThIEf.ps1 then use any of the following commands.
 
+## List all currently open browser windows/tabs
 ### List URLs for all current IE browser sessions, result will contain the BrowserIndex used by other actions
 ```
 Invoke-PowerThIEf -action ListUrls
@@ -52,7 +53,7 @@ Invoke-PowerThIEf -action InvokeJS -Script <JavaScript to run>
 Invoke-PowerThIEf -action InvokeJS -Script 'alert(document.location.href);'
 ```
 
-### Invoke JavaScript in the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Invoke JavaScript in the selected IE window or tab. 
 ```
 Invoke-PowerThIEf -action InvokeJS -BrowserIndex <BrowserIndex> -Script\<JavaScript to run>
 ```
@@ -63,7 +64,7 @@ Invoke-PowerThIEf -action InvokeJS -BrowserIndex <BrowserIndex> -Script\<JavaScr
 Invoke-PowerThIEf -action DumpHtml
 ```
 
-### Dump HTML from the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Dump HTML from the selected IE window or tab. 
 ```
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex>
 ```
