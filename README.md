@@ -1,5 +1,5 @@
 # Invoke-PowerThIEf 2018 Nettitude
-An IE Post Exploitation Library
+An IE Post Exploitation Library released at Steelcon in Sheffield 7th July 2018. 
 
 Written by Rob Maslen @rbmaslen
 
