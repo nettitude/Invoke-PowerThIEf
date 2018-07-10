@@ -6,7 +6,7 @@ Written by Rob Maslen @rbmaslen
 # Examples
 ### Capturing credentials entered via LastPass
 <p align="center">
-  <img src="https://github.com/nettitude/Invoke-PowerThIEf/blob/master/Images/creds-lastpass.gif?raw=true" width="400" title="LastPass Credentials in transit">
+  <img src="https://github.com/nettitude/Invoke-PowerThIEf/blob/master/Images/creds-lastpass.gif?raw=true" width="800" title="LastPass Credentials in transit">
 </p>
 
 # Usage
