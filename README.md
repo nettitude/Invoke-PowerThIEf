@@ -4,7 +4,10 @@ An IE Post Exploitation Library
 Written by Rob Maslen @rbmaslen
 
 # Examples
-
+### Capturing credentials entered via LastPass
+<p align="center">
+  <img src="https://github.com/nettitude/Invoke-PowerThIEf/blob/master/Images/creds-lastpass.gif?raw=true" width="400" title="LastPass Credentials in transit">
+</p>
 
 # Usage
 First import the module using . .\Invoke-PowerThIEf.ps1 then use any of the following commands.
