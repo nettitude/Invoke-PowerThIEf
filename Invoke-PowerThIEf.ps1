@@ -770,7 +770,7 @@ Invoke-PowerThIEf -action NewBackgroundTab -BrowserIndex <BrowserIndex>
                             $fileName = [System.IO.Path]::GetFileNameWithoutExtension($shell.FullName).ToLower();
                             if ($fileName.Equals("iexplore"))
                             {
-                                $currHwnd.Add([PowerThIEfWindowHelper]::GetHWNDFromDocument($shell.Document))
+                                $currHwnd.Add([PowerThIEf.WindowHelper]::GetHWNDFromDocument($shell.Document))
                             }
                         }
 
